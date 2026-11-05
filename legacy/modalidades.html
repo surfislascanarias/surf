@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title> Surf Islas Canarias</title>
+<link rel="icon" type="image/png" href="assets/img/logosfed/EST. 2018.png">
+<meta name="description" content="Descubre todas las modalidades de surf en Canarias: surf, bodyboard, kitesurf, windsurf, SUP, skimboard y foil surf. La comunidad del surf canario.">
+
+<meta name="keywords" content="surf canarias, bodyboard canarias, kitesurf canarias, windsurf canarias, sup canarias, skimboard canarias, foil surf canarias, surf islas canarias">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+
+/* CARD */
+.category-card{
+  text-align:center;
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 🔴 4 columnas */
+  gap: 20px;
+}
+/* =================================
+   IMÁGENES CORREGIDAS
+================================= */
+.category-icon{
+  width:100%;
+  height:140px; /* altura uniforme para todas las cards */
+  border-radius:8px;
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.category-icon img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+/* TEXTO */
+.category-card h3{
+  margin:8px 0;
+}
+
+.category-card p{
+  font-size:14px;
+  margin-bottom:12px;
+}
+
+/* BOTÓN */
+.category-btn{
+  display:inline-block;
+  padding:8px 16px;
+  background:#0a2540;
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+  margin:auto;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="header">
+
+<h1>Surf Islas Canarias</h1>
+
+<p>La comunidad canaria de surf: spots, noticias y buen rollo. ¡Al agua, mi niño!</p>
+
+<nav class="nav">
+
+      <a href="/">Inicio</a>
+      <a href="/islas.html">Islas</a>
+      <a href="/campeonatos.html">Campeonatos</a>
+      <a href="/modalidades.html">Modalidades</a>
+      <a href="/blog.html">Noticias</a>
+      <a href="/about.html">Sobre nosotros</a>
+      <a href="/contact.html">Contacto</a>
+
+</nav>
+
+</header>
+
+
+<section class="categories">
+<div class="grid categories-grid">
+
+<div class="category-card">
+<a href="surf.html">
+<div class="category-icon">
+<img src="assets/img/surf.JPG" alt="Surf en Canarias">
+</div>
+</a>
+<h3>Surf</h3>
+<p>Actualidad, spots y campeonatos de surf en Canarias.</p>
+<a href="surf.html" class="category-btn">Ver modalidad</a>
+</div>
+
+<div class="category-card">
+<a href="bodyboard.html">
+<div class="category-icon">
+<img src="assets/img/bodyboard.JPG" alt="Bodyboard en Canarias">
+</div>
+</a>
+<h3>Bodyboard</h3>
+<p>La fuerza del bodyboard canario y sus riders.</p>
+<a href="bodyboard.html" class="category-btn">Ver modalidad</a>
+</div>
+
+<div class="category-card">
+<a href="sup.html">
+<div class="category-icon">
+<img src="assets/img/sup.JPG" alt="Paddle Surf en Canarias">
+</div>
+</a>
+<h3>SUP</h3>
+<p>Race, olas y travesías en las islas.</p>
+<a href="sup.html" class="category-btn">Ver modalidad</a>
+</div>
+
+<div class="category-card">
+<a href="longboard.html">
+<div class="category-icon">
+<img src="assets/img/longboard.JPG" alt="Longboard en Canarias">
+</div>
+</a>
+<h3>Longboard</h3>
+<p>Estilo clásico y tradición del surf.</p>
+<a href="longboard.html" class="category-btn">Ver modalidad</a>
+</div>
+
+<div class="category-card">
+<a href="windsurf.html">
+<div class="category-icon">
+<img src="assets/img/windsurf.png" alt="Windsurf en Canarias">
+</div>
+</a>
+<h3>Windsurf</h3>
+<p>Velocidad, viento y acción en Canarias.</p>
+<a href="windsurf.html" class="category-btn">Ver modalidad</a>
+</div>
+
+<div class="category-card">
+<a href="kitesurf.html">
+<div class="category-icon">
+<img src="assets/img/kitesurf.JPG" alt="Kitesurf en Canarias">
+</div>
+</a>
+<h3>Kitesurf</h3>
+<p>El poder del viento y el mar.</p>
+<a href="kitesurf.html" class="category-btn">Ver modalidad</a>
+</div>
+
+<div class="category-card">
+<a href="skimboard.html">
+<div class="category-icon">
+<img src="assets/img/skimboard.png" alt="Skimboard en Canarias">
+</div>
+</a>
+<h3>Skimboard</h3>
+<p>Velocidad y técnica en la orilla.</p>
+<a href="skimboard.html" class="category-btn">Ver modalidad</a>
+</div>
+
+<div class="category-card">
+<a href="foilsurf.html">
+<div class="category-icon">
+<img src="assets/img/foil.JPG" alt="Foil Surf en Canarias">
+</div>
+</a>
+<h3>Foil Surf</h3>
+<p>Surf del futuro sobre el agua.</p>
+<a href="foilsurf.html" class="category-btn">Ver modalidad</a>
+</div>
+
+</div>
+</section>
+
+
+<footer class="footer">
+<p>
+© 2025 SurfIslasCanarias — Hecho en Canarias.
+</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

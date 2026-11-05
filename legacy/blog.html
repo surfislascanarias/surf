@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noticias Surf Islas Canarias</title>
+ <link rel="icon" type="image/png" href="assets/img/logosfed/EST. 2018.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<style>
+/* ===== GRID NOTICIAS ===== */
+.news-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap:25px;
+  margin-bottom:50px;
+}
+
+.news-card{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 12px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.news-card:hover{
+  transform:translateY(-5px);
+}
+
+.news-card img{
+  width:80%;
+  height:180px;
+  object-fit:contain;
+  padding:15px;
+  margin-top:10px;
+  background:none;
+}
+
+/* ===== CONTENIDO ===== */
+.news-content{
+  padding:18px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.news-content h3{
+  font-size:1rem;
+  margin-bottom:15px;
+  min-height:60px;
+}
+
+/* ===== BOTÓN MEJORADO ===== */
+.news-btn{
+  display:inline-block;
+  padding:12px 22px;
+  background:linear-gradient(135deg,#046994,#0b1c2c);
+  color:white;
+  border-radius:30px;
+  font-size:0.9rem;
+  font-weight:700;
+  text-decoration:none;
+  text-align:center;
+  transition:0.3s;
+  min-width:120px;
+}
+
+.news-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* ===== BOTONES SLIDE JUNTO A LEER ===== */
+.slide-controls{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  margin-top:10px;
+}
+
+.slide-controls button{
+  background:rgba(0,0,0,0.6);
+  color:white;
+  border:none;
+  font-size:18px;
+  padding:8px 14px;
+  cursor:pointer;
+  border-radius:50%;
+  transition:0.3s;
+}
+
+.slide-controls button:hover{
+  background:rgba(0,0,0,0.8);
+}
+
+/* ===== FEDERACIONES ===== */
+.fed-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap:25px;
+  margin-top:50px;
+}
+
+.fed-card{
+  background:white;
+  border-radius:16px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.fed-card:hover{
+  transform:scale(1.05);
+}
+
+.fed-card img{
+  width:100px;
+  height:100px;
+  object-fit:contain;
+  margin-bottom:15px;
+}
+
+.fed-card a{
+  text-decoration:none;
+  color:#0b1c2c;
+  font-weight:600;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  font-size:1rem;
+}
+
+#murcia-logo{
+  width:130px;   
+  height:130px;  
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .news-card img{ height:160px; width:85%; }
+  .news-content h3{ font-size:0.95rem; }
+  .news-btn{ font-size:0.85rem; padding:10px 18px; min-width:100px; }
+  .fed-card img{ width:80px; height:80px; }
+}
+
+@media(max-width:480px){
+  .news-card img{ height:140px; width:90%; }
+  .news-content h3{ font-size:0.9rem; }
+  .news-btn{ font-size:0.8rem; padding:8px 15px; min-width:90px; }
+  .fed-card img{ width:70px; height:70px; }
+}
+</style>
+</head>
+<body>
+
+<head>
+<style>
+.logo-left {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  z-index: 1000;
+}
+
+.logo-left img {
+  height: 150px;
+  width: auto;
+}
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Surf Islas Canarias</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="assets/img/logosfed/EST. 2018.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+  <div class="header-container">
+
+    <div class="logo">
+      
+      <!-- LOGO SIC -->
+   <div class="logo-left">
+  <img src="assets/img/logosfed/LOGO-sin.png" 
+       alt="SURF ISLAS CANARIAS">
+</div>
+  <div>
+  </div>
+</div>
+       <h1 style="font-size:50px;"> Surf Islas Canarias </h1>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle">
+      ☰
+    </button>
+
+    <nav class="nav" id="navMenu">
+
+      <a href="/">Inicio</a>
+      <a href="/blog.html">Noticias</a>
+      <a href="/islas.html">Islas</a>
+      <a href="/campeonatos.html">Campeonatos</a>
+      <a href="/modalidades.html">Modalidades</a>
+      <a href="/about.html">Sobre nosotros</a>
+      <a href="/contact.html">Contacto</a>
+
+    </nav>
+
+  </div>
+<!-- ICONOS DE REDES SOCIALES EN ESQUINA SUPERIOR DERECHA -->
+<style>
+.social-top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;  /* separación entre los iconos */
+  z-index: 1000;
+}
+
+.social-top-right img {
+  height: 30px;  /* tamaño de los iconos */
+  width: auto;
+  display: block;
+}
+/* ===== INSTAGRAM CARD (INDEPENDIENTE) ===== */
+/* CARD */
+.instagram-card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 25px;
+}
+
+/* IMAGEN */
+.instagram-card img {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* TEXTO ABAJO PERO CENTRADO */
+.instagram-text {
+  margin-top: auto; /* separación normal, no forzada */
+  text-align: center;
+}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias Surf Islas Canarias</title>
+  
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+  </style>
+</head>
+ 
+</style>
+
+ <div class="social-top-right">
+    <a href="https://www.instagram.com/surfislascanarias/" target="_blank">
+      <img src="assets/img/rrss/instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/surfcanaria" target="_blank">
+      <img src="assets/img/rrss/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://www.tiktok.com/@surfislascanarias" target="_blank">
+      <img src="assets/img/rrss/tiktok.png" alt="TikTok">
+    </a>
+  </div>
+</header>
+  
+
+<!-- ================== NOTICIAS ================== -->
+<section class="section">
+
+<div class="news-grid">
+
+<!-- ================== INSTAGRAM CARD ================== -->
+<div class="instagram-card">
+  <a href="https://www.instagram.com/stories/surfislascanarias/" target="_blank">
+    <img src="assets/img/logosfed/EST. 2018.png" alt="Surf Islas Canarias">
+  </a>
+  <p class="instagram-text">Surf Islas Canarias</p>
+</div>
+<!-- FESURF -->
+<div class="news-card">
+
+  <img src="assets/img/logosfed/fesurf.jpg.png">
+  <div class="news-content">
+    <h3 id="fesurf-title"></h3>
+    <div class="slide-controls">
+      <button onclick="prev('fesurf')"><</button>
+      <a id="fesurf-link" class="news-btn" target="_blank">Leer noticia</a>
+      <button onclick="next('fesurf')">></button>
+    </div>
+  </div>
+</div>
+
+<!-- FEDECAN -->
+<div class="news-card">
+
+  <img src="assets/img/logosfed/fcs_logo.png">
+  <div class="news-content">
+    <h3 id="fcsurf-title"></h3>
+    <div class="slide-controls">
+      <button onclick="prev('fcsurf')"><</button>
+      <a id="fcsurf-link" class="news-btn" target="_blank">Leer noticia</a>
+      <button onclick="next('fcsurf')">></button>
+    </div>
+  </div>
+</div>
+
+</div>
+</section>
+
+<!-- ================== FEDERACIONES REGIONALES ================== -->
+<section class="section">
+<h2>Federaciones Regionales</h2>
+<div class="fed-grid">
+
+<div class="fed-card">
+  <a href="https://www.federacionasturianadesurf.com" target="_blank">
+    <img src="assets/img/logosfed/logos-fspa.png">FSPA
+  </a>
+</div>
+
+<div class="fed-card">
+  <a href="https://www.fgsurf.org/" target="_blank">
+    <img src="assets/img/logosfed/logo-fgsurf.png">FGS
+  </a>
+</div>
+
+<div class="fed-card">
+  <a href="https://www.federacioncantabradesurf.com/" target="_blank">
+    <img src="assets/img/logosfed/fcssnegro.PNG">FCS
+  </a>
+</div>
+
+<div class="fed-card">
+  <a href="https://fsrm.es/" target="_blank">
+    <img id="murcia-logo" src="assets/img/logosfed/fsmazul.PNG">FSRM
+  </a>
+</div>
+
+<div class="fed-card">
+  <a href="https://www.facebook.com/AsociacionAndaluzaDeSurf" target="_blank">
+    <img src="assets/img/logosfed/fedeanda.png">FEDEANDALSURF
+  </a>
+</div>
+
+<div class="fed-card">
+  <a href="https://fsurf.cat/" target="_blank">
+    <img src="assets/img/logosfed/FSURFcat.png">FSURFCAT
+  </a>
+</div>
+
+</div>
+</section>
+
+<footer class="footer">
+  © 2026 Surf Islas Canarias
+</footer>
+
+<script>
+const feeds = {
+  fesurf: "https://api.rss2json.com/v1/api.json?rss_url=https://www.fesurf.es/feed/",
+  fcsurf: "https://api.rss2json.com/v1/api.json?rss_url=https://fcsurf.es/feed/"
+};
+
+let store = { fesurf: [], fcsurf: [] };
+let index = { fesurf:0, fcsurf:0 };
+
+async function load(section){
+  const res = await fetch(feeds[section]);
+  const data = await res.json();
+
+  store[section] = data.items.slice(0,5).map(item => ({
+    title: item.title,
+    link: item.link
+  }));
+
+  render(section);
+}
+
+function render(section){
+  const item = store[section][index[section]];
+  if(!item) return;
+
+  document.getElementById(section+"-title").textContent = item.title;
+  document.getElementById(section+"-link").href = item.link;
+}
+
+function next(section){
+  index[section]++;
+  if(index[section]>=store[section].length) index[section]=0;
+  render(section);
+}
+
+function prev(section){
+  index[section]--;
+  if(index[section]<0) index[section]=store[section].length-1;
+  render(section);
+}
+
+// auto slide
+setInterval(()=>{
+  next('fesurf');
+  next('fcsurf');
+},5000);
+
+// refresco noticias cada 5 min
+setInterval(()=>{
+  load('fesurf');
+  load('fcsurf');
+},300000);
+
+load('fesurf');
+load('fcsurf');
+</script>
+
+</body>
+</html>

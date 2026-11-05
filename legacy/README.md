@@ -1,0 +1,1 @@
+Copia de los HTML, CSS y JavaScript originales del repositorio a 8/10/2026. Los materiales gráficos originales siguen disponibles en el repositorio oficial. Copia de conservación; la web nueva está en la raíz. Commit de referencia: 1dc8b9b3a079d09412680d34a4b9ce48fd2ab3a7.

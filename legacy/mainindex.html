@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Surf Islas Canarias</title>
+
+<meta name="description" content="Surf en Canarias: spots, previsión, campeonatos y actualidad.">
+
+<link rel="icon" href="assets/img/logosfed/EST. 2018.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/mainstyle.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+  <div class="header-container">
+
+    <div class="logo-left">
+      <img src="assets/img/logosfed/LOGO-sin.png" alt="Surf Islas Canarias" loading="lazy">
+    </div>
+
+    <div class="header-text">
+      <h1>Surf Islas Canarias</h1>
+      <p>Spots, modalidades, cultura surf y actualidad del océano en Canarias.</p>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+    <nav class="nav" id="navMenu">
+      <a href="/">Inicio</a>
+      <a href="/islas.html">Islas</a>
+      <a href="/campeonatos.html">Campeonatos</a>
+      <a href="/modalidades.html">Modalidades</a>
+      <a href="/blog.html">Noticias</a>
+      <a href="/about.html">Sobre nosotros</a>
+      <a href="/contact.html">Contacto</a>
+    </nav>
+
+  </div>
+
+  <div class="social-top-right">
+    <a href="https://www.instagram.com/surfislascanarias/" target="_blank">
+      <img src="assets/img/rrss/instagram.png" alt="Instagram" loading="lazy">
+    </a>
+    <a href="https://www.facebook.com/surfcanaria" target="_blank">
+      <img src="assets/img/rrss/facebook.png" alt="Facebook" loading="lazy">
+    </a>
+    <a href="https://www.tiktok.com/@surfislascanarias" target="_blank">
+      <img src="assets/img/rrss/tiktok.png" alt="TikTok" loading="lazy">
+    </a>
+  </div>
+
+</header>
+
+<main>
+
+<section class="home-sections">
+
+  <div class="slider-container">
+
+    <!-- SLIDE 1 -->
+    <div class="slider-card active">
+      <a href="/islas.html">
+        <h3>Descubre las Islas Canarias</h3>
+        <p>Guías locales de todas las islas.</p>
+        <img src="assets/img/spots.png" alt="Spots" loading="lazy">
+      </a>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slider-card">
+      <a href="/modalidades.html">
+        <h3>Modalidades</h3>
+        <p>Surf, bodyboard, longboard, SUP y más.</p>
+        <img src="assets/img/modalidades.png" alt="Modalidades" loading="lazy">
+      </a>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slider-card">
+      <a href="/campeonatos.html">
+        <h3>Eventos & Campeonatos</h3>
+        <p>Competiciones oficiales y eventos locales.</p>
+        <img src="assets/img/campeonatos.png" alt="Campeonatos" loading="lazy">
+      </a>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slider-card">
+      <h3>Noticias</h3>
+      <p>Últimas noticias</p>
+      <iframe src="//lightwidget.com/widgets/8392e071eb1657e28cb85e8463c7183a.html"
+        loading="lazy"></iframe>
+    </div>
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+  </div>
+
+</section>
+
+<!-- PREVISIÓN -->
+<section class="home-forecast">
+
+  <h2>Previsión del tiempo</h2>
+
+  <div class="forecast-grid">
+
+    <iframe src="https://embed.windy.com/embed2.html?lat=28.345&lon=-15.903&zoom=7&overlay=waves"></iframe>
+
+    <iframe src="https://embed.windy.com/embed2.html?lat=28.345&lon=-15.903&zoom=7&overlay=wind"></iframe>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+  © 2026 Surf Islas Canarias
+</footer>
+
+<script src="/assets/js/mainjs.js" defer></script>
+
+</body>
+</html>

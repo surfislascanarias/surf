@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Previsión de Olas · Surf Islas Canarias</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: Inter, sans-serif;
+  background: #f8fafc;
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 16px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.1);
+  overflow: hidden;
+}
+
+.map iframe {
+  width: 100%;
+  height: 280px;
+  border: none;
+}
+
+.content {
+  padding: 20px;
+}
+
+.stats {
+  display: flex;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.stat {
+  background: #eef6fb;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.semaforo {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.verde { background: #16a34a; }
+.amarillo { background: #eab308; }
+.rojo { background: #dc2626; }
+
+.btn {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+  background: #FF6B35;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<section class="container">
+  <h2>🌊 Previsión de olas · Datos en tiempo real</h2>
+
+  <div class="grid">
+
+    <!-- GRAN CANARIA -->
+    <div class="card">
+      <div class="map">
+        <iframe src="https://embed.windy.com/embed2.html?lat=27.98&lon=-15.41&zoom=8&overlay=waves"></iframe>
+      </div>
+      <div class="content">
+        <span id="gc-status" class="semaforo">Cargando...</span>
+        <h3>Gran Canaria</h3>
+
+        <div class="stats">
+          <div class="stat" id="gc-height">Altura: --</div>
+          <div class="stat" id="gc-period">Periodo: --</div>
+          <div class="stat" id="gc-dir">Dirección: --</div>
+        </div>
+
+        <a href="spots-gran-canaria.html" class="btn">Ver spots →</a>
+      </div>
+    </div>
+
+    <!-- TENERIFE -->
+    <div class="card">
+      <div class="map">
+        <iframe src="https://embed.windy.com/embed2.html?lat=28.30&lon=-16.54&zoom=8&overlay=waves"></iframe>
+      </div>
+      <div class="content">
+        <span id="tf-status" class="semaforo">Cargando...</span>
+        <h3>Tenerife</h3>
+
+        <div class="stats">
+          <div class="stat" id="tf-height">Altura: --</div>
+          <div class="stat" id="tf-period">Periodo: --</div>
+          <div class="stat" id="tf-dir">Dirección: --</div>
+        </div>
+
+        <a href="spots-tenerife.html" class="btn">Ver spots →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+async function cargarOlas(lat, lon, pref) {
+  const url = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_period,wave_direction`;
+
+  const res = await fetch(url);
+  const data = await res.json();
+
+  const altura = data.hourly.wave_height[0];
+  const periodo = data.hourly.wave_period[0];
+  const direccion = data.hourly.wave_direction[0];
+
+  document.getElementById(`${pref}-height`).textContent = `Altura: ${altura.toFixed(1)} m`;
+  document.getElementById(`${pref}-period`).textContent = `Periodo: ${periodo.toFixed(0)} s`;
+  document.getElementById(`${pref}-dir`).textContent = `Dirección: ${direccion.toFixed(0)}°`;
+
+  const estado = document.getElementById(`${pref}-status`);
+
+  if (altura >= 1.2 && periodo >= 12) {
+    estado.textContent = "🟢 BUENO";
+    estado.className = "semaforo verde";
+  } else if (altura >= 0.7) {
+    estado.textContent = "🟡 REGULAR";
+    estado.className = "semaforo amarillo";
+  } else {
+    estado.textContent = "🔴 MALO";
+    estado.className = "semaforo rojo";
+  }
+}
+
+cargarOlas(27.98, -15.41, "gc"); // Gran Canaria
+cargarOlas(28.30, -16.54, "tf"); // Tenerife
+</script>
+
+</body>
+</html>

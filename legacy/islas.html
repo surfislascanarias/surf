@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Islas Canarias · Surf Islas Canarias</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --accent: #FF6B35;
+  --texto: #0f172a;
+  --fondo: #fdfdfd;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+header {
+  background: linear-gradient(180deg, rgba(4,105,148,0.9), rgba(4,105,148,0.6));
+  color: white;
+  text-align: center;
+  padding: 30px 16px;
+}
+
+header h1 { margin:0; font-size: 2rem; }
+header p { margin-top:8px; font-weight:400; }
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  font-weight: 500;
+}
+
+/* Grid 4x4 cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 24px;
+  padding: 30px 16px;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+}
+
+.card h3 {
+  margin: 10px 0 6px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+/* Carrusel interno */
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  max-height: 180px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: none;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-inner img.active {
+  display: block;
+}
+
+/* Botón */
+.card .btn {
+  padding: 8px 16px;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.card .btn:hover {
+  background: #e85a28;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .carousel-inner img { height: 150px; }
+}
+@media(max-width: 480px){
+  .carousel-inner img { height: 120px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Surf Islas Canarias</h1>
+  <p>Explora cada isla y sus mejores spots de surf</p>
+  <nav class="nav">
+    <a href="/index.html">Inicio</a>
+    <a href="/blog.html">Noticias</a>
+    <a href="/spots.html">Spots</a>
+    <a href="/campeonatos.html">Campeonatos</a>
+    <a href="/modalidades.html">Modalidades</a>
+    <a href="/about.html">Sobre Surf Islas Canarias</a>
+    <a href="/contact.html">Contacto</a>
+  </nav>
+</header>
+
+<main>
+  <div class="cards-grid">
+
+    <!-- Lanzarote -->
+    <div class="card">
+      <div class="carousel-inner" data-interval="3000">
+     <img src="/assets/img/lzn1.jfif" class="active" alt="Lanzarote">
+          <img src="/assets/img/lzn2.jfif" alt="Lanzarote">
+          <img src="/assets/img/lzn3.jfif" alt="Lanzarote">
+          <img src="/assets/img/lzn4.jfif" alt="Lanzarote">
+          <img src="/assets/img/lzn5.jfif" alt="Lanzarote">
+          <img src="/assets/img/lzn6.jfif" alt="Lanzarote">
+          <img src="/assets/img/lzn7.jfif" alt="Lanzarote">
+          <img src="/assets/img/lzn8.jfif" alt="Lanzarote">
+          <img src="/assets/img/lzn9.jfif" alt="Lanzarote">
+          <img src="/assets/img/lzn10.jfif" alt="Lanzarote">
+          <img src="/assets/img/lzn11.jfif" alt="Lanzarote">
+          <img src="/assets/img/lzn12.jfif" alt="Lanzarote">
+          <img src="/assets/img/lzn13.jfif" alt="Lanzarote">
+          <img src="/assets/img/lzn14.jfif" alt="Lanzarote">
+      </div>
+      <h3>Lanzarote</h3>
+      <p>Descubre los mejores spots de surf en Lanzarote.</p>
+      <a href="/assets/islas/lanzarote.html" class="btn">Ver isla</a>
+    </div>
+
+    <!-- Fuerteventura -->
+    <div class="card">
+      <div class="carousel-inner" data-interval="3000">
+        <img src="/assets/img/ftv1.jfif" class="active" alt="Fuerteventura">
+            <img src="/assets/img/ftv2.jfif" alt="Fuerteventura">
+            <img src="/assets/img/ftv3.jfif" alt="Fuerteventura">
+            <img src="/assets/img/ftv4.jfif" alt="Fuerteventura">
+            <img src="/assets/img/ftv5.jfif" alt="Fuerteventura">
+            <img src="/assets/img/ftv6.jfif" alt="Fuerteventura">
+            <img src="/assets/img/ftv7.jfif" alt="Fuerteventura">
+            <img src="/assets/img/ftv8.jfif" alt="Fuerteventura">
+            <img src="/assets/img/ftv9.jfif" alt="Fuerteventura">
+            <img src="/assets/img/ftv10.jfif" alt="Fuerteventura">
+            <img src="/assets/img/ftv11.jfif" alt="Fuerteventura">
+            <img src="/assets/img/ftv12.jfif" alt="Fuerteventura">
+            <img src="/assets/img/ftv13.jfif" alt="Fuerteventura">
+            <img src="/assets/img/ftv14.jfif" alt="Fuerteventura">
+      </div>
+      <h3>Fuerteventura</h3>
+      <p>Playas y viento perfectos para surfear.</p>
+      <a href="/assets/islas/fuerteventura.html" class="btn">Ver isla</a>
+    </div>
+
+    <!-- Gran Canaria -->
+    <div class="card">
+      <div class="carousel-inner" data-interval="3000">
+        <img src="/assets/img/gc1.jfif" class="active" alt="Gran Canaria">
+            <img src="/assets/img/gc2.jfif" alt="Gran Canaria">
+            <img src="/assets/img/gc3.jfif" alt="Gran Canaria">
+            <img src="/assets/img/gc4.jfif" alt="Gran Canaria">
+            <img src="/assets/img/gc5.jfif" alt="Gran Canaria">
+            <img src="/assets/img/gc6.jfif" alt="Gran Canaria">
+            <img src="/assets/img/gc7.jfif" alt="Gran Canaria">
+            <img src="/assets/img/gc8.jfif" alt="Gran Canaria">
+            <img src="/assets/img/gc9.jfif" alt="Gran Canaria">
+            <img src="/assets/img/gc10.jfif" alt="Gran Canaria">
+            <img src="/assets/img/gc11.jfif" alt="Gran Canaria">
+            <img src="/assets/img/gc12.jfif" alt="Gran Canaria">
+            <img src="/assets/img/gc13.jfif" alt="Gran Canaria">
+            <img src="/assets/img/gc14.jfif" alt="Gran Canaria">
+      </div>
+      <h3>Gran Canaria</h3>
+      <p>Una isla continente llena de olas.</p>
+      <a href="/assets/islas/gran-canaria.html" class="btn">Ver isla</a>
+    </div>
+
+    <!-- Tenerife -->
+    <div class="card">
+      <div class="carousel-inner" data-interval="3000">
+        <img src="/assets/img/tnf1.jfif" class="active" alt="Tenerife">
+        <img src="/assets/img/tnf2.jfif" alt="Tenerife">
+        <img src="/assets/img/tnf3.jfif" alt="Tenerife">
+        <img src="/assets/img/tnf4.jfif" alt="Tenerife">
+        <img src="/assets/img/tnf5.jfif" alt="Tenerife">
+        <img src="/assets/img/tnf6.jfif" alt="Tenerife">
+        <img src="/assets/img/tnf7.jfif" alt="Tenerife">
+        <img src="/assets/img/tnf8.jfif" alt="Tenerife">
+        <img src="/assets/img/tnf9.jfif" alt="Tenerife">
+        <img src="/assets/img/tnf10.jfif" alt="Tenerife">
+        <img src="/assets/img/tnf11.jfif" alt="Tenerife">
+        <img src="/assets/img/tnf12.jfif" alt="Tenerife">
+        <img src="/assets/img/tnf13.jfif" alt="Tenerife">
+        <img src="/assets/img/tnf14.jfif" alt="Tenerife">
+      </div>
+      <h3>Tenerife</h3>
+      <p>Surf clásico y naturaleza volcánica.</p>
+      <a href="/assets/islas/tenerife.html" class="btn">Ver isla</a>
+    </div>
+
+    <!-- La Palma -->
+    <div class="card">
+      <div class="carousel-inner" data-interval="3000">
+       <img src="/assets/img/lp1.jfif" class="active" alt="La Palma">
+            <img src="/assets/img/lp2.jfif" alt="La Palma">
+            <img src="/assets/img/lp3.jfif" alt="La Palma">
+            <img src="/assets/img/lp4.jfif" alt="La Palma">
+            <img src="/assets/img/lp5.jfif" alt="La Palma">
+            <img src="/assets/img/lp6.jfif" alt="La Palma">
+            <img src="/assets/img/lp7.jfif" alt="La Palma">
+            <img src="/assets/img/lp8.jfif" alt="La Palma">
+            <img src="/assets/img/lp9.jfif" alt="La Palma">
+            <img src="/assets/img/lp10.jfif" alt="La Palma">
+            <img src="/assets/img/lp11.jfif" alt="La Palma">
+            <img src="/assets/img/lp12.jfif" alt="La Palma">
+            <img src="/assets/img/lp13.jfif" alt="La Palma">
+            <img src="/assets/img/lp14.jfif" alt="La Palma">
+      </div>
+      <h3>La Palma</h3>
+      <p>La Isla Bonita con spots escondidos.</p>
+      <a href="/assets/islas/la-palma.html" class="btn">Ver isla</a>
+    </div>
+
+    <!-- La Gomera -->
+    <div class="card">
+      <div class="carousel-inner" data-interval="3000">
+      <img src="/assets/img/lgo1.jfif" class="active" alt="La Gomera">
+          <img src="/assets/img/lgo2.jfif" alt="La Gomera">
+          <img src="/assets/img/lgo3.jfif" alt="La Gomera">
+          <img src="/assets/img/lgo4.jfif" alt="La Gomera">
+          <img src="/assets/img/lgo5.jfif" alt="La Gomera">
+          <img src="/assets/img/lgo6.jfif" alt="La Gomera">
+          <img src="/assets/img/lgo7.jfif" alt="La Gomera">
+          <img src="/assets/img/lgo8.jfif" alt="La Gomera">
+          <img src="/assets/img/lgo9.jfif" alt="La Gomera">
+          <img src="/assets/img/lgo10.jfif" alt="La Gomera">
+          <img src="/assets/img/lgo11.jfif" alt="La Gomera">
+          <img src="/assets/img/lgo12.jfif" alt="La Gomera">
+          <img src="/assets/img/lgo13.jfif" alt="La Gomera">
+          <img src="/assets/img/lgo14.jfif" alt="La Gomera">
+      </div>
+      <h3>La Gomera</h3>
+      <p>Tranquilidad y surf en un entorno verde.</p>
+      <a href="/assets/islas/la-gomera.html" class="btn">Ver isla</a>
+    </div>
+
+    <!-- El Hierro -->
+    <div class="card">
+      <div class="carousel-inner" data-interval="3000">
+      <img src="/assets/img/eh1.jfif" class="active" alt="El Hierro">
+        <img src="/assets/img/eh2.jfif" alt="El Hierro">
+        <img src="/assets/img/eh3.jfif" alt="El Hierro">
+        <img src="/assets/img/eh4.jfif" alt="El Hierro">
+        <img src="/assets/img/eh5.jfif" alt="El Hierro">
+        <img src="/assets/img/eh6.jfif" alt="El Hierro">
+        <img src="/assets/img/eh7.jfif" alt="El Hierro">
+        <img src="/assets/img/eh8.jfif" alt="El Hierro">
+        <img src="/assets/img/eh9.jfif" alt="El Hierro">
+        <img src="/assets/img/eh10.jfif" alt="El Hierro">
+        <img src="/assets/img/eh11.jfif" alt="El Hierro">
+        <img src="/assets/img/eh12.jfif" alt="El Hierro">
+        <img src="/assets/img/eh13.jfif" alt="El Hierro">
+        <img src="/assets/img/eh14.jfif" alt="El Hierro">
+      </div>
+      <h3>El Hierro</h3>
+      <p>La isla más remota y auténtica para surfear.</p>
+      <a href="/assets/islas/el-hierro.html" class="btn">Ver isla</a>
+    </div>
+
+    <!-- La Graciosa -->
+    <div class="card">
+      <div class="carousel-inner" data-interval="3000">
+      <img src="/assets/img/lgr1.jfif" class="active" alt="La Graciosa">
+          <img src="/assets/img/lgr2.jfif" alt="La Graciosa">
+          <img src="/assets/img/lgr3.jfif" alt="La Graciosa">
+          <img src="/assets/img/lgr4.jfif" alt="La Graciosa">
+          <img src="/assets/img/lgr5.jfif" alt="La Graciosa">
+          <img src="/assets/img/lgr6.jfif" alt="La Graciosa">
+          <img src="/assets/img/lgr7.jfif" alt="La Graciosa">
+          <img src="/assets/img/lgr8.jfif" alt="La Graciosa">
+          <img src="/assets/img/lgr9.jfif" alt="La Graciosa">
+          <img src="/assets/img/lgr10.jfif" alt="La Graciosa">
+          <img src="/assets/img/lgr11.jfif" alt="La Graciosa">
+          <img src="/assets/img/lgr12.jfif" alt="La Graciosa">
+          <img src="/assets/img/lgr13.jfif" alt="La Graciosa">
+          <img src="/assets/img/lgr14.jfif" alt="La Graciosa">
+      </div>
+      <h3>La Graciosa</h3>
+      <p>La isla más pequeña y paradisíaca del archipiélago.</p>
+      <a href="/assets/islas/la-graciosa.html" class="btn">Ver isla</a>
+    </div>
+
+  </div>
+</main>
+
+<footer style="text-align:center; padding:30px; background:#0f172a; color:white;">
+  © 2026 Surf Islas Canarias
+</footer>
+
+<script>
+// Función para carruseles individuales
+document.querySelectorAll('.carousel-inner').forEach(carousel => {
+  const imgs = carousel.querySelectorAll('img');
+  let current = 0;
+  const interval = parseInt(carousel.getAttribute('data-interval')) || 3000;
+
+  setInterval(() => {
+    imgs[current].classList.remove('active');
+    current = (current + 1) % imgs.length;
+    imgs[current].classList.add('active');
+  }, interval);
+});
+</script>
+
+</body>
+</html>
+
+
+
