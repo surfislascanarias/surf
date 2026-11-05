@@ -1,0 +1,153 @@
+/* CONTENEDOR */
+
+.calendar-container{
+
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+
+}
+
+
+/* HEADER CALENDARIO */
+
+.calendar-top{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+flex-wrap:wrap;
+gap:15px;
+
+}
+
+.calendar-top h1{
+
+font-size:32px;
+color:#046994;
+
+}
+
+
+/* GRID CALENDARIO */
+
+#calendar{
+
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:10px;
+margin-bottom:40px;
+
+}
+
+
+/* DIA */
+
+.day{
+
+padding:20px;
+background:white;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+min-height:80px;
+cursor:pointer;
+transition:0.3s;
+font-weight:600;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+}
+
+.day:hover{
+
+background:#046994;
+color:white;
+transform:translateY(-3px);
+
+}
+
+
+/* DIA CON EVENTO */
+
+.has-event{
+
+border-left:5px solid #ff6b35;
+
+}
+
+
+/* EVENTOS */
+
+#eventList{
+
+display:flex;
+flex-direction:column;
+gap:20px;
+
+}
+
+
+/* CARD EVENTO */
+
+.event-card{
+
+background:white;
+padding:25px;
+border-radius:14px;
+box-shadow:0 6px 25px rgba(0,0,0,0.1);
+transition:0.3s;
+
+}
+
+.event-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+/* TITULO */
+
+.event-title{
+
+font-size:20px;
+font-weight:700;
+margin-bottom:5px;
+
+}
+
+
+/* FECHA */
+
+.event-date{
+
+color:#046994;
+font-weight:600;
+margin-bottom:5px;
+
+}
+
+
+/* UBICACION */
+
+.event-location{
+
+color:#666;
+
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+#calendar{
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+}

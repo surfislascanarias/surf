@@ -1,0 +1,45 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider-container {
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+}
+
+.slider-card {
+  display: none;
+  text-align: center;
+}
+
+.slider-card.active {
+  display: block;
+}
+
+.slider-card img {
+  width: 100%;
+  height: auto;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.social-top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

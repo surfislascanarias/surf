@@ -1,0 +1,167 @@
+/* =================================
+EVENTOS PREMIUM STYLE
+================================= */
+
+body{
+
+font-family:'Inter',sans-serif;
+background:#f4f7fa;
+
+}
+
+
+/* HERO */
+
+.hero-eventos{
+
+text-align:center;
+padding:40px 20px;
+
+}
+
+.hero-eventos h1{
+
+font-size:32px;
+margin-bottom:10px;
+color:#046994;
+
+}
+
+.hero-eventos p{
+
+color:#555;
+font-size:16px;
+
+}
+
+
+/* GRID */
+
+.grid-categorias{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+padding:20px;
+
+}
+
+
+/* CARD */
+
+.categoria-card{
+
+background:white;
+border-radius:16px;
+padding:30px;
+text-align:center;
+text-decoration:none;
+color:#111;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+transition:all 0.3s ease;
+
+position:relative;
+overflow:hidden;
+
+}
+
+
+.categoria-card:hover{
+
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+}
+
+
+/* TOP BORDER COLORS */
+
+.elite::before{background:#ff6b35;}
+.espana::before{background:#c60b1e;}
+.junior::before{background:#00b894;}
+.kids::before{background:#00cec9;}
+.bodyboard::before{background:#6c5ce7;}
+.longboard::before{background:#fdcb6e;}
+.sup::before{background:#0984e3;}
+.especiales::before{background:#e84393;}
+.espera::before{background:#636e72;}
+
+.categoria-card::before{
+
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:5px;
+
+}
+
+
+/* ICON */
+
+.categoria-icon{
+
+font-size:42px;
+margin-bottom:15px;
+
+}
+
+
+/* TITLE */
+
+.categoria-card h2{
+
+font-size:20px;
+margin-bottom:10px;
+
+}
+
+
+/* TEXT */
+
+.categoria-card p{
+
+font-size:14px;
+color:#666;
+margin-bottom:15px;
+
+}
+
+
+/* BUTTON */
+
+.categoria-btn{
+
+display:inline-block;
+background:#046994;
+color:white;
+padding:8px 18px;
+border-radius:8px;
+font-size:14px;
+font-weight:600;
+
+transition:0.3s;
+
+}
+
+.categoria-card:hover .categoria-btn{
+
+background:#ff6b35;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero-eventos h1{
+
+font-size:26px;
+
+}
+
+}

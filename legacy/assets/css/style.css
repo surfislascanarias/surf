@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #111;
+  background: #f5f7fa;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(120deg, #0077ff, #00c2ff);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-content h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+.hero-content p {
+  margin-top: 10px;
+}
+
+/* BOTONES */
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 22px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.btn-secondary {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* FUNNEL */
+.funnel {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+select {
+  padding: 10px;
+  width: 220px;
+}
+
+/* OFFERS */
+.offers {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.price {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* HOW */
+.how {
+  text-align: center;
+  padding: 40px 20px;
+  background: white;
+}
+
+.steps div {
+  margin: 10px 0;
+}
+
+/* REVIEWS */
+.reviews {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.review {
+  margin: 10px auto;
+  max-width: 500px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: #0077ff;
+  color: white;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+}
